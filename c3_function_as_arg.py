@@ -13,7 +13,7 @@ def third_function(func, *args) -> int:
 
 
 def fourth_function(func, text: str) -> str:
-    '''This function'''
+    '''This function will return any text as the title'''
     return func(text)
 
 
