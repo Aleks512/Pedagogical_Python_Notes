@@ -33,7 +33,17 @@ def do_sth_with_iterable(func, n) -> list[int]:
         outcome.append(x**n)
     return outcome
 
+# Exemple of HOF using 2 first class functions
 
+def square(x : int) -> int: # First class function
+    return x*x
+
+def do_sthElse_with_iterable(func) -> int: #  HOF
+    results = []
+    my_iterable = iterable_production(10) # calling 2nd First class function
+    for i in my_iterable:
+        results.append(func(i)) # # First class function as arg
+    return results
 
 if __name__ == "__main__":
     # using imported variable/function as arg
@@ -45,4 +55,4 @@ if __name__ == "__main__":
     print(str_result)  # Dear Sir Or Madame, Life Is Beautiful, Enjoy !
     
     print(do_sth_with_iterable(iterable_production, 10)) # [1, 1024, 59049, 1048576, 9765625, 60466176, 282475249, 1073741824, 3486784401, 10000000000]
-    
+    print(do_sthElse_with_iterable(square))  # [1, 4, 9, 16, 25, 36, 49, 64, 81, 100]
