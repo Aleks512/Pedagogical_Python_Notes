@@ -1,5 +1,5 @@
 # Pass the function as an argument to another function 
-
+# third_function and fourth_function are what we call HOF - Higher Order Functions as they take as their arguments, other functions.
 from c2_function_as_variable import some_variable, other_variable
 
 
