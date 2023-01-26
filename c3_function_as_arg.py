@@ -7,20 +7,42 @@ from c2_function_as_variable import some_variable, other_variable
             some_varaiable and other_variable, let's use them here'''
 
 
+#  Higher order function taking other func as argument
 def third_function(func, *args) -> int:
-    '''Third function will return the power based on only 2 arg'''
     return func(*args)
 
 
 def fourth_function(func, text: str) -> str:
-    '''This function will return any text as the title'''
     return func(text)
+
+# Other exemple
+
+# First class function
+
+def iterable_production(n: int) -> list[int]:
+    numbers = []
+    for x in range(1, n+1):
+        numbers.append(x)
+    return numbers
+
+# Higher order function
+
+def do_sth_with_iterable(func, n):
+    outcome = []
+    for x in func(n):
+        outcome.append(x**n)
+    return outcome
+
 
 
 if __name__ == "__main__":
-    # using variable/function as arg
+    # using imported variable/function as arg
     int_result = third_function(other_variable, 2, 3)
     print(int_result)  # 8
-    # using variable/function as arg
+
+    # using imported variable/function as arg
     str_result = fourth_function(some_variable, "dear siR or MADAME, life is BEAUTIFUL, enjoy !")
     print(str_result)  # Dear Sir Or Madame, Life Is Beautiful, Enjoy !
+    
+    print(do_sth_with_iterable(iterable_production, 10))
+    
