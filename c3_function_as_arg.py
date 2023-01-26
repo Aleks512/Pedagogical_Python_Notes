@@ -44,5 +44,5 @@ if __name__ == "__main__":
     str_result = fourth_function(some_variable, "dear siR or MADAME, life is BEAUTIFUL, enjoy !")
     print(str_result)  # Dear Sir Or Madame, Life Is Beautiful, Enjoy !
     
-    print(do_sth_with_iterable(iterable_production, 10))
+    print(do_sth_with_iterable(iterable_production, 10)) # [1, 1024, 59049, 1048576, 9765625, 60466176, 282475249, 1073741824, 3486784401, 10000000000]
     
