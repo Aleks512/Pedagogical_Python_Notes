@@ -27,7 +27,7 @@ def iterable_production(n: int) -> list[int]:
 
 # Higher order function
 
-def do_sth_with_iterable(func, n):
+def do_sth_with_iterable(func, n) -> list[int]:
     outcome = []
     for x in func(n):
         outcome.append(x**n)
